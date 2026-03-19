@@ -107,7 +107,7 @@ export default function PublicCategoryPage({ category }: CategorizedProducts) {
         <div className="space-y-6 border-b border-slate-100">
           <div className="space-y-4">
             <div className="inline-flex items-center rounded-full border border-slate-200 bg-white px-4 py-1.5 shadow-sm">
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-600">Explore</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-600">Explore</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-medium text-slate-900 tracking-tight font-serif leading-tight">
               {getTitle()}
@@ -162,7 +162,7 @@ export default function PublicCategoryPage({ category }: CategorizedProducts) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.length > 0 ? (
             products.map((p, i) => (
-              <FadeIn key={p?.id} delayMs={i * 50} direction="up">
+              <FadeIn key={i} delayMs={i * 50} direction="up">
                 <ProductCard product={p} />
               </FadeIn>
             ))
